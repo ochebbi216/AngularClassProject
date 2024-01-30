@@ -4,7 +4,7 @@
         "id": "123456",
         "cin": "293899",
         "name": "Emna",
-        "cv": "lien",
+        "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
         "type": "etudiante",
         "createdDate": "29/01/2024"
       },
@@ -12,7 +12,7 @@
         "id": "123390",
         "cin": "293866",
         "name": "Ilyes",
-        "cv": "lien",
+        "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
         "type": "etudiant",
         "createdDate": "02/01/2024"
       },
@@ -20,7 +20,7 @@
         "id": "123123",
         "cin": "293833",
         "name": "Omar",
-        "cv": "lien",
+        "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
         "type": "etudiant",
         "createdDate": "09/01/2024"
       }
