@@ -11,6 +11,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "resolveJsonModule": true, //for parsing json
+    "esModuleInterop": true,//for parsing json
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
