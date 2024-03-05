@@ -30,6 +30,7 @@ import { FirebaseModule } from './Firebase.module (2)';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { ArticleFormComponent } from './article-form/article-form.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {MatTableDataSource} from '@angular/material/table';
     ToolsComponent,
     ArticlesComponent,
     EventsComponent,
-    LoginComponent
+    LoginComponent,
+    ArticleFormComponent
   ],
   imports: [
     BrowserModule,

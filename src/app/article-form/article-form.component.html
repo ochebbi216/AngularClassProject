@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onsub()">
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <input matInput placeholder="Type" formControlName="type">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Lien</mat-label>
+      <input matInput placeholder="Lien" formControlName="lien">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Source PDF</mat-label>
+      <input matInput placeholder="Source PDF" formControlName="sourcepdf">
+    </mat-form-field>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  

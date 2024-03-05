@@ -7,6 +7,7 @@ import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
+import { ArticleFormComponent } from './article-form/article-form.component';
 const routes: Routes = [
   { path: 'create', component: MemberFormComponent, pathMatch: 'full' }, 
   // full path lezmo ykoun exacte
@@ -16,6 +17,9 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesComponent },
   { path: 'events', component: EventsComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'createarticle', component: ArticleFormComponent },
+
+  
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: ':id/edit', pathMatch:'full', component: MemberFormComponent },
