@@ -23,6 +23,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { FirebaseModule } from './Firebase.module (2)';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import {MatSort, MatSortModule} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +41,8 @@ import { EventsComponent } from './events/events.component';
     DashboardComponent,
     ToolsComponent,
     ArticlesComponent,
-    EventsComponent
+    EventsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +60,14 @@ import { EventsComponent } from './events/events.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatButtonModule,
+    MatCardModule,
+    FirebaseModule,
+    MatPaginatorModule,
+    MatSortModule,
+
+
 
   ],
   providers: [],

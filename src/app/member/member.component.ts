@@ -13,12 +13,9 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
 export class MemberComponent {
   constructor(private MS : Member1Service, private router: Router, private dialog : MatDialog){}
 
-// nom='2 glid 1';
 displayedColumns:String[]=['1','2', '3', '4', '5', '6','7']
 dataSource:any[]= global._db.members;
-  // {id:'001', cin:'12345678', name:'imen',cv: 'lien', type:'teacher',createdDate:'12/12/2020'},
-  // {id:'002', cin:'12345679', name:'ilyes',cv: 'lien', type:'student',createdDate:'01/12/2022'},
-  // {id:'003', cin:'12345677', name:'emna',cv: 'lien', type:'Data scientest',createdDate:'12/10/2022'}
+
   confirmDelete(id:string):void{
     //1 lancer la boite 
     let dialogRef = this.dialog.open(ConfirmDialogComponent, {

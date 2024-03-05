@@ -6,18 +6,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
-  { path: 'create', component: MemberFormComponent, pathMatch: 'full' },
+  { path: 'create', component: MemberFormComponent, pathMatch: 'full' }, 
+  // full path lezmo ykoun exacte
   { path: 'members', component: MemberComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'tools', component: ToolsComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'events', component: EventsComponent},
+  { path: 'login', component: LoginComponent},
 
-  { path: '', redirectTo: 'members', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: ':id/edit', pathMatch:'full', component: MemberFormComponent },
 
-  { path: '**', redirectTo: 'members' }
+  { path: '**', redirectTo: 'members' } // ammar 404
 
 ];
 

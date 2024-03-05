@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Member1Service } from 'src/Services/member1.service';
 
 @Component({
-  selector: 'app-member-form',
+  selector: 'app-member-form', 
   templateUrl: './member-form.component.html',
   styleUrls: ['./member-form.component.css']
 })
@@ -13,28 +13,25 @@ export class MemberFormComponent implements OnInit {
   // creer une  instance du service dans le constructeur et l'assigner à un attribut
   constructor(private MS : Member1Service, private router: Router, private activatedRoute:ActivatedRoute){}
 form!:FormGroup;
+idcourant!:any;
 ngOnInit():void{
   //recupere la route actuelle pour savoir si on est en mode ajout ou modification d'un membre
-  const idcourant = this.activatedRoute.snapshot.params['id'];
-  console.log(idcourant);
-  if(!!idcourant){
-    this.MS.getMemberById(idcourant).subscribe((data)=>{
-      this.initForm2(data);
+  this.idcourant = this.activatedRoute.snapshot.params['id'];
 
+  console.log(this.idcourant);
+  if(!!this.idcourant){ //definit et non null
+    this.MS.getMemberById(this.idcourant).subscribe((data)=>{
+      this.editForm(data);
     });
   
   //if(id) existe et a une valeur =>
-  // getMemberbyId(id)=> initForm2(memberFind)
+  // getMemberbyId(id)=> editForm(memberFind)
   //else => je suis dans create 
   }
-  else this.initForm();
+  else this.addForm();
 }
-initForm2(data:any):void{
+editForm(data:any):void{
   this.form = new FormGroup({
-    // cin: data.cin,
-    // name: data.name,
-    // cv: data.cv,
-    // type: data.type,
     cin: new FormControl(data.cin,[Validators.required]),
     name: new FormControl(data.name,[Validators.required]),
     cv: new FormControl(data.cv,[Validators.required]),
@@ -43,7 +40,7 @@ initForm2(data:any):void{
     })
 
 }
-initForm():void{
+addForm():void{
   this.form = new FormGroup({
     cin: new FormControl(null,[Validators.required,Validators.maxLength(8)]),
     name: new FormControl(null,[Validators.required]),
@@ -53,12 +50,22 @@ initForm():void{
 
 }
 onsub():void{
-  const member= this.form.value
-  console.log(member);
+ const member = this.form.value;
+if(!!this.idcourant){
+  // update
+  //appeler le fonction onsave : generateur de requete 
+  //subscribe(()=>{}): ()le var return from back et {} pour res et error
+  this.MS.updateMember(this.idcourant, member).subscribe(()=>{
+    this.router.navigate(['/members'])
+  })
+}
+else{
   //appeler le fonction onsave : generateur de requete 
   //subscribe(()=>{}): ()le var return from back et {} pour res et error
   this.MS.OnSave(member).subscribe(()=>{
     this.router.navigate(['/members'])
   })
+}
+
 }
 }

@@ -24,6 +24,89 @@
         "type": "etudiant",
         "createdDate": "09/01/2024"
       }
+    ],
+    "article":[
+      {
+        "id":"123147",
+        "type":"etudiant",
+        "title":"AI",
+        "lien":"google.tn",
+        "date":"09/01/2024",
+        "sourcepdf":"google.com"
+      },
+      {
+        "id":"123001",
+        "type":"etudiant",
+        "title":"DL",
+        "lien":"google.tn",
+        "date":"09/01/2025",
+        "sourcepdf":"google.com"
+      },
+      {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },
+      {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      },     {
+        "id":"123000",
+        "type":"etudiant",
+        "title":"Dev",
+        "lien":"google.tn",
+        "date":"09/01/2026",
+        "sourcepdf":"google.com"
+      }
     ]
   }
   
