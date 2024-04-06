@@ -4,6 +4,8 @@ import { ViewChild, AfterViewInit, Component, OnInit } from '@angular/core';
 import {Article} from "src/Modeles/Publication"
 import { ArticleService } from 'src/Services/article.service';
 import { MatSort } from '@angular/material/sort';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
+import { ArticleFormComponent } from '../article-form/article-form.component';
 
 @Component({
   selector: 'app-articles',
@@ -11,20 +13,36 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'type', 'titre', 'date'];
-  datasource = new MatTableDataSource<Article>();
 
+  datasource= new MatTableDataSource<Article>();
+  tabArticle: Article[]=[];
+  constructor(private AS: ArticleService, private dialog: MatDialog,) {
+  }
+
+  displayedColumns: string[] = ['id', 'type', 'titre', 'date'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  
-  constructor(private MS: ArticleService) {
-    this.datasource.data = this.MS.source;
-  }
+
+  getAllArticles(){
+    this.AS.getAll().subscribe((data)=>{
+      this.tabArticle= data;
+      this.datasource = new  MatTableDataSource<Article>(this.tabArticle);
+    
+    }); }
+
   ngAfterViewInit(): void {
     this.datasource.sort = this.sort;
     this.datasource.paginator = this.paginator;  
+    this.getAllArticles();
   }
+  open() {
+    const dialogConfig = new MatDialogConfig();
 
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    this.dialog.open(ArticleFormComponent, dialogConfig);
+}
   
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

@@ -1,5 +1,5 @@
-<form [formGroup]="form" (ngSubmit)="onsub()">
-
+<form [formGroup]="form" >
+  <!-- (ngSubmit)="onsub()" -->
     <br>
     <mat-form-field appearance="fill">
       <mat-label>Type</mat-label>
@@ -21,6 +21,8 @@
       <input matInput placeholder="Source PDF" formControlName="sourcepdf">
     </mat-form-field>
     <br>
-    <button type="submit">Submit</button>
+    <!-- <button type="submit">Submit</button> -->
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
   </form>
   
