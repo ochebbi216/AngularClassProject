@@ -16,10 +16,15 @@ export class ArticleService {
 
     return this.HttpClient.get<Article[]>('http://localhost:3000/article');
   }
-  // OnSave(articleToSave: any): Observable<any> {
-  //   //generateur de requete http
-  //   //thread observable
-  //   // return this.httpClient.post('localhost:8000/api/article',articleToSave);
+
+  onsave(articleToSave: any): Observable<void> {
+
+    return this.HttpClient.post<void>('http://localhost:3000/article',articleToSave);
+  }
+  delete(id: String): Observable<void> {
+
+    return this.HttpClient.delete<void>(`http://localhost:3000/article/${id}`);
+  }
   //   const article = {
   //     ...articleToSave, //... pour extracter les attributs
   //     id: Math.ceil(Math.random() * 1000).toString(), //ceil pour forsage de type

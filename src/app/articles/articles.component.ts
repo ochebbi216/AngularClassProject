@@ -6,6 +6,7 @@ import { ArticleService } from 'src/Services/article.service';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import { ArticleFormComponent } from '../article-form/article-form.component';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-articles',
@@ -19,7 +20,7 @@ export class ArticlesComponent implements AfterViewInit {
   constructor(private AS: ArticleService, private dialog: MatDialog,) {
   }
 
-  displayedColumns: string[] = ['id', 'type', 'titre', 'date'];
+  displayedColumns: string[] = ['id', 'type', 'titre', 'date', 'actions'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -30,6 +31,23 @@ export class ArticlesComponent implements AfterViewInit {
     
     }); }
 
+    confirmDelete(id:string):void{
+      //1 lancer la boite 
+      let dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        height: '200px',
+        width: '300px',
+      });
+      //2 attendre le resultat de user 
+      dialogRef.afterClosed().subscribe(x => {
+      //3 si user a fait le click sur confirm
+        if(x){
+          this.AS.delete(id).subscribe(()=>{
+            this.getAllArticles();
+          })
+        }
+      });
+      
+    }
   ngAfterViewInit(): void {
     this.datasource.sort = this.sort;
     this.datasource.paginator = this.paginator;  

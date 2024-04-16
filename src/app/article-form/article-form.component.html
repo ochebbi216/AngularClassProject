@@ -1,28 +1,46 @@
+<!-- lorsque je clique sur submit , on recupere fel ts. -->
 <form [formGroup]="form" >
-  <!-- (ngSubmit)="onsub()" -->
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Type</mat-label>
-      <input matInput placeholder="Type" formControlName="type">
+  <p>
+      <mat-form-field appearance="fill">
+          <mat-label>type</mat-label>
+          <input matInput placeholder="type" formControlName="type">
+      </mat-form-field>
+  </p>
+  <p>
+      <mat-form-field appearance="fill">
+          <mat-label>title</mat-label>
+          <input matInput placeholder="title" formControlName="title">
+
+      </mat-form-field>
+  </p>
+  <p>
+      <mat-form-field appearance="fill">
+          <mat-label>lien</mat-label>
+          <input matInput placeholder="lien" formControlName="lien">
+
+      </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Title</mat-label>
-      <input matInput placeholder="Title" formControlName="title">
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Lien</mat-label>
-      <input matInput placeholder="Lien" formControlName="lien">
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Source PDF</mat-label>
-      <input matInput placeholder="Source PDF" formControlName="sourcepdf">
-    </mat-form-field>
-    <br>
-    <!-- <button type="submit">Submit</button> -->
-    <button class="mat-raised-button"(click)="close()">Close</button>
-    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
-  </form>
+
+  </p>
+  <p>
+      <mat-form-field appearance="fill">
+          <mat-label>  sourcepdf</mat-label>
+          <input matInput placeholder="sourcepdf" formControlName="sourcepdf">
+
+      </mat-form-field>
+
+  </p>
+
+  <mat-dialog-actions>
+      <button class="mat-raised-button"(click)="close()">Close</button>
+      <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+  </mat-dialog-actions>
   
+</form>
