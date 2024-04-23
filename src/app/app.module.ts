@@ -33,6 +33,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import { ArticleFormComponent } from './article-form/article-form.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { EventCreateComponent } from './event-create/event-create.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     ArticlesComponent,
     EventsComponent,
     LoginComponent,
-    ArticleFormComponent
+    ArticleFormComponent,
+    EventCreateComponent
   ],
   imports: [
     BrowserModule,

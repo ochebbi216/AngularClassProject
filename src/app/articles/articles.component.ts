@@ -70,4 +70,17 @@ export class ArticlesComponent implements AfterViewInit {
       this.datasource.paginator.firstPage();
     }
   }
+
+  edit(id:string){
+    const dialogConfig = new MatDialogConfig();
+  
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    this.AS.getArticleById(id).subscribe((r)=>{
+      dialogConfig.data =r 
+      this.dialog.open(ArticleFormComponent, dialogConfig);
+    
+    })
+    
+  }
 }

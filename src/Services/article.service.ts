@@ -25,6 +25,15 @@ export class ArticleService {
 
     return this.HttpClient.delete<void>(`http://localhost:3000/article/${id}`);
   }
+  update(id: String,articleToUpdate: any ): Observable<void> {
+
+    return this.HttpClient.put<void>(`http://localhost:3000/article/${id}`, articleToUpdate);
+  }
+  getArticleById(id :String):Observable<Article>{
+    return this.HttpClient.get<Article>(`http://localhost:3000/article/${id}`);
+  }
+
+}
   //   const article = {
   //     ...articleToSave, //... pour extracter les attributs
   //     id: Math.ceil(Math.random() * 1000).toString(), //ceil pour forsage de type
@@ -63,5 +72,5 @@ export class ArticleService {
     
 
   // }
-}
+
 

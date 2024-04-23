@@ -27,28 +27,20 @@
   ],
   "article": [
     {
-      "id": "123001",
       "type": "etudiant",
       "title": "DL",
       "lien": "google.tn",
+      "sourcepdf": "google.fr",
       "date": "09/01/2025",
-      "sourcepdf": "google.com"
+      "id": "123001"
     },
     {
-      "id": "123000",
       "type": "etudiant",
-      "title": "Dev",
+      "title": "Dev4",
       "lien": "google.tn",
+      "sourcepdf": "google.com",
       "date": "09/01/2026",
-      "sourcepdf": "google.com"
-    },
-    {
-      "id": "123000",
-      "type": "etudiant",
-      "title": "Dev",
-      "lien": "google.tn",
-      "date": "09/01/2026",
-      "sourcepdf": "google.com"
+      "id": "123000"
     },
     {
       "id": "123000",
@@ -105,6 +97,29 @@
       "lien": ".tn",
       "sourcepdf": ".com",
       "date": "2024-04-23T23:00:00.000Z"
+    }
+  ],
+  "evt": [
+    {
+      "titre": "Event A",
+      "lieu": "New York",
+      "date_debut": "2024-05-23T23:00:00.000Z",
+      "date_fin": "2024-05-29T23:00:00.000Z",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titre": "Event B",
+      "lieu": "Paris",
+      "date_debut": "2024-06-15",
+      "date_fin": "2024-06-17"
+    },
+    {
+      "titre": "disco",
+      "lieu": "sfax",
+      "date_debut": "2024-04-22T23:00:00.000Z",
+      "date_fin": "2024-04-25T23:00:00.000Z",
+      "id": "d1cf"
     }
   ]
 }
