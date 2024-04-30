@@ -35,7 +35,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { EventCreateComponent } from './event-create/event-create.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

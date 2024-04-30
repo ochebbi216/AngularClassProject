@@ -20,7 +20,7 @@ ngOnInit():void{
 
   console.log(this.idcourant);
   if(!!this.idcourant){ //definit et non null
-    this.MS.getMemberById(this.idcourant).subscribe((data)=>{
+    this.MS.getMemberbyId(this.idcourant).subscribe((data)=>{
       this.editForm(data);
     });
   
@@ -62,7 +62,7 @@ if(!!this.idcourant){
 else{
   //appeler le fonction onsave : generateur de requete 
   //subscribe(()=>{}): ()le var return from back et {} pour res et error
-  this.MS.OnSave(member).subscribe(()=>{
+  this.MS.ONSAVE(member).subscribe(()=>{
     this.router.navigate(['/members'])
   })
 }

@@ -26,7 +26,7 @@ dataSource:any[]= global._db.members;
     dialogRef.afterClosed().subscribe(x => {
     //3 si user a fait le click sur confirm
       if(x){
-        this.MS.Ondelete(id).subscribe(()=>{
+        this.MS.onDelete(id).subscribe(()=>{
           this.dataSource=this.MS.tab
         })
       }
