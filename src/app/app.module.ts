@@ -34,7 +34,7 @@ import { ArticleFormComponent } from './article-form/article-form.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { EventCreateComponent } from './event-create/event-create.component';
-
+import {NgChartsModule} from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +73,8 @@ import { EventCreateComponent } from './event-create/event-create.component';
     MatPaginatorModule,
     MatSortModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgChartsModule
 
 
 

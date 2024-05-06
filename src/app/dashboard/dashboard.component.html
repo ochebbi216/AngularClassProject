@@ -1,28 +1,28 @@
-<div fxLayout="row" fxLayoutAlign="space-around center" >
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Members</mat-card-title>
-        <mat-card-subtitle>{{Nb_Memebers}}</mat-card-subtitle>
-    </mat-card-header>
-</mat-card>
-    <mat-card>
-
-    <mat-card-header>
-        <mat-card-title>Articles</mat-card-title>
-        <mat-card-subtitle>{{Nb_Articles}}</mat-card-subtitle>
-    </mat-card-header>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+    <mat-card style="background-color: #FFD700;"> <!-- Gold Color -->
+        <mat-card-header>
+            <mat-card-title>Members</mat-card-title>
+            <mat-card-subtitle>{{Nb_Members}}</mat-card-subtitle>
+        </mat-card-header>
     </mat-card>
-    <mat-card>
-
-    <mat-card-header>
-        <mat-card-title>Events</mat-card-title>
-        <mat-card-subtitle>{{Nb_Events}}</mat-card-subtitle>
-    </mat-card-header>
+    <mat-card style="background-color: #90EE90;"> <!-- Light Green -->
+        <mat-card-header>
+            <mat-card-title>Articles</mat-card-title>
+            <mat-card-subtitle>{{Nb_Articles}}</mat-card-subtitle>
+        </mat-card-header>
     </mat-card>
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Tools</mat-card-title>
-        <mat-card-subtitle>{{Nb_Tools}}</mat-card-subtitle>
-    </mat-card-header>
-</mat-card>
+    <mat-card style="background-color: #ADD8E6;"> <!-- Light Blue -->
+        <mat-card-header>
+            <mat-card-title>Events</mat-card-title>
+            <mat-card-subtitle>{{Nb_Events}}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
 </div>
+<div class="charts-container">
+    <div class="chart-wrapper">
+      <canvas baseChart [type]="'bar'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+    </div>
+    <div class="chart-wrapper">
+      <canvas baseChart [type]="'pie'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+    </div>
+  </div>
