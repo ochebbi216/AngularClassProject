@@ -20,9 +20,21 @@
 </div>
 <div class="charts-container">
     <div class="chart-wrapper">
-      <canvas baseChart [type]="'bar'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+        <canvas baseChart [type]="'line'" [datasets]="chartData" [labels]="chartLabels"
+            [options]="chartOptions"></canvas>
     </div>
     <div class="chart-wrapper">
-      <canvas baseChart [type]="'pie'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"></canvas>
+        <canvas baseChart [type]="'pie'" [datasets]="chartData" [labels]="chartLabels"
+            [options]="chartOptions"></canvas>
     </div>
-  </div>
+</div>
+<div class="charts-container">
+    <div class="chart-wrapper">
+        <canvas baseChart [type]="'doughnut'" [datasets]="chartData" [labels]="chartLabels"
+            [options]="chartOptions"></canvas>
+    </div>
+    <div class="chart-wrapper">
+        <canvas baseChart [type]="'polarArea'" [datasets]="chartData" [labels]="chartLabels"
+            [options]="chartOptions"></canvas>
+    </div>
+</div>

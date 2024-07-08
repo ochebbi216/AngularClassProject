@@ -24,6 +24,7 @@ export class ArticleFormComponent implements OnInit {
   
   ngOnInit(): void {
     this.id = this.data ? this.data.id : null; 
+    
 
     if (this.id) {
       // Fetch article data if editing

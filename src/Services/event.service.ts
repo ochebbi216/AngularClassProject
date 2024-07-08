@@ -8,24 +8,23 @@ import { global } from 'src/app/app-config';
   providedIn: 'root'
 })
 export class EventService {
-  tab: any[] = [];
 
   constructor(private httpClient: HttpClient) {
     this.GET;
   }
 
-  GET(): Observable<any[]> {
+  GET(): Observable<Evt[]> {
     //envoier une requette http en mode GET vers JSON SERVER
     return this.httpClient.get<Evt[]>('http://localhost:3000/evt');
   }
-  ONDELETE(id: string): Observable<any> {
-    return this.httpClient.delete(`http://localhost:3000/evt/${id}`);
+  ONDELETE(id: string): Observable<Evt> {
+    return this.httpClient.delete<Evt>(`http://localhost:3000/evt/${id}`);
   }
-  save(form: any): Observable<any> {
-    return this.httpClient.post<any>('http://localhost:3000/evt', form);
+  save(form: Evt): Observable<Evt> {
+    return this.httpClient.post<Evt>('http://localhost:3000/evt', form);
   }
-  edit(form: any, id: string): Observable<any> {
-    return this.httpClient.put<any>(`http://localhost:3000/evt/${id}`, form);
+  edit(form: Evt, id: string): Observable<Evt> {
+    return this.httpClient.put<Evt>(`http://localhost:3000/evt/${id}`, form);
   }
   getEvtById(id: String): Observable<Evt> {
     return this.httpClient.get<Evt>(`http://localhost:3000/evt/${id}`);

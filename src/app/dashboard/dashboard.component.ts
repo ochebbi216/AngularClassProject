@@ -24,23 +24,28 @@ export class DashboardComponent implements OnInit {
     this.AS.getAll().subscribe((data) => {
       this.Nb_Articles = data.length;
     });
+    
+    this.ES.GET().subscribe((datas) => {
+      this.Nb_Events = datas.length;
+    });
+
     this.MS.GETALL().subscribe((datas) => {
       this.Nb_Members = datas.length;
       datas.forEach(member => {
         if (member.type.toLowerCase() === 'teacher') {
           this.teacherCount++;
-        } else if (member.type.toLowerCase() === 'etudiant') {
+        } else{
           this.studentCount++;
         }
       });
       this.updateChartData();
     });
-    this.ES.GET().subscribe((datas) => {
-      this.Nb_Events = datas.length;
-    });
+
   }
 
   chartData: ChartDataset[] = [];
+  chartDataLine: string[] = [];
+
   chartLabels: string[] = ['Teachers', 'Students'];
   chartOptions: ChartOptions = {
     responsive: true,

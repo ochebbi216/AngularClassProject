@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Router, ActivatedRoute } from '@angular/router';
 import { EventService } from 'src/Services/event.service';
 
 @Component({
@@ -14,24 +13,22 @@ export class EventCreateComponent implements OnInit {
   verifEdit: boolean = false;
 
   constructor(
-    private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<EventCreateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private ES: EventService,
-    private router: Router,
+    private eventService: EventService
   ) {}
 
   ngOnInit(): void {
     if (this.data) {
       this.verifEdit = true;
-      console.log(this.data);
-      this.initForm2();
+      this.initFormWithData(); // Initialize form with data if in edit mode
     } else {
       this.verifEdit = false;
-      this.initForm();
+      this.initForm(); // Initialize empty form if in create mode
     }
   }
 
+  // Method to initialize form with empty values
   initForm(): void {
     this.form = new FormGroup({
       titre: new FormControl(null, [Validators.required]),
@@ -40,28 +37,31 @@ export class EventCreateComponent implements OnInit {
       date_fin: new FormControl(null, [Validators.required]),
     });
   }
-  initForm2(): void {
+
+  // Method to initialize form with existing event data
+  initFormWithData(): void {
     this.form = new FormGroup({
-      titre: new FormControl(this.data?.titre, [Validators.required]),
+      titre: new FormControl(this.data?.titre, [Validators.required, Validators.minLength(3)]),
       lieu: new FormControl(this.data?.lieu, [Validators.required]),
       date_debut: new FormControl(this.data?.date_debut, [Validators.required]),
       date_fin: new FormControl(this.data?.date_fin, [Validators.required]),
     });
   }
 
+  // Method to save the form data
   save() {
     if (!this.verifEdit) {
-      this.dialogRef.close(this.form.value);
-      this.ES.save(this.form.value).subscribe(() => {
-        console.log(this.form.value);
+      this.eventService.save(this.form.value).subscribe(() => {
+        this.dialogRef.close(this.form.value);
       });
     } else {
-      this.dialogRef.close(this.form.value);
-      this.ES.edit(this.form.value, this.data?.id).subscribe(() => {
+      this.eventService.edit(this.form.value, this.data?.id).subscribe(() => {
+        this.dialogRef.close(this.form.value);
       });
     }
   }
 
+  // Method to close the dialog
   close() {
     this.dialogRef.close();
   }

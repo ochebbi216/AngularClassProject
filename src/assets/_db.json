@@ -7,7 +7,7 @@
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
       "type": "etudiant",
       "createdDate": "29/01/2024",
-      "tab_pub":[
+      "tab_pub": [
         {
           "type": "etudiant",
           "title": "DL",
@@ -17,7 +17,7 @@
           "id": "123001"
         }
       ],
-      "tab_evt":[
+      "tab_evt": [
         {
           "titre": "Event A",
           "lieu": "New York",
@@ -33,7 +33,26 @@
       "name": "Ilyes",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
       "type": "etudiant",
-      "createdDate": "02/01/2024"
+      "createdDate": "02/01/2024",
+      "tab_pub": [
+        {
+          "type": "etudiant",
+          "title": "DL",
+          "lien": "google.tn",
+          "sourcepdf": "google.fr",
+          "date": "09/01/2025",
+          "id": "123001"
+        }
+      ],
+      "tab_evt": [
+        {
+          "titre": "Event A",
+          "lieu": "New York",
+          "date_debut": "2024-05-23T23:00:00.000Z",
+          "date_fin": "2024-05-29T23:00:00.000Z",
+          "id": "1"
+        }
+      ]
     },
     {
       "id": "123123",
@@ -41,7 +60,26 @@
       "name": "Omar",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
       "type": "etudiant",
-      "createdDate": "09/01/2024"
+      "createdDate": "09/01/2024",
+      "tab_pub": [
+        {
+          "type": "etudiant",
+          "title": "DL",
+          "lien": "google.tn",
+          "sourcepdf": "google.fr",
+          "date": "09/01/2025",
+          "id": "123001"
+        }
+      ],
+      "tab_evt": [
+        {
+          "titre": "Event A",
+          "lieu": "New York",
+          "date_debut": "2024-05-23T23:00:00.000Z",
+          "date_fin": "2024-05-29T23:00:00.000Z",
+          "id": "1"
+        }
+      ]
     },
     {
       "id": "123123",
@@ -49,7 +87,26 @@
       "name": "Omar",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
       "type": "teacher",
-      "createdDate": "09/01/2024"
+      "createdDate": "09/01/2024",
+      "tab_pub": [
+        {
+          "type": "etudiant",
+          "title": "DL",
+          "lien": "google.tn",
+          "sourcepdf": "google.fr",
+          "date": "09/01/2025",
+          "id": "123001"
+        }
+      ],
+      "tab_evt": [
+        {
+          "titre": "Event A",
+          "lieu": "New York",
+          "date_debut": "2024-05-23T23:00:00.000Z",
+          "date_fin": "2024-05-29T23:00:00.000Z",
+          "id": "1"
+        }
+      ]
     },
     {
       "id": "123123",
@@ -57,7 +114,26 @@
       "name": "Omar",
       "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf?fbclid=IwAR3rjvx0W67Zyy1t_awl72dV8xMPOo4wWxhqF03aTA4sAJNXztiTFAaAmOY",
       "type": "teacher",
-      "createdDate": "09/01/2024"
+      "createdDate": "09/01/2024",
+      "tab_pub": [
+        {
+          "id": "123000",
+          "type": "etudiant",
+          "title": "Dev",
+          "lien": "google.tn",
+          "date": "09/01/2026",
+          "sourcepdf": "google.com"
+        }
+      ],
+      "tab_evt": [
+        {
+          "id": "2",
+          "titre": "Event B",
+          "lieu": "Paris",
+          "date_debut": "2024-06-15",
+          "date_fin": "2024-06-17"
+        }
+      ]
     }
   ],
   "article": [
@@ -151,17 +227,17 @@
     },
     {
       "titre": "disco",
-      "lieu": "sfax",
+      "lieu": "sousse",
       "date_debut": "2024-04-22T23:00:00.000Z",
       "date_fin": "2024-04-25T23:00:00.000Z",
       "id": "d1cf"
     },
     {
-      "titre": "disco",
-      "lieu": "sousse",
-      "date_debut": "2024-04-22T23:00:00.000Z",
-      "date_fin": "2024-04-25T23:00:00.000Z",
-      "id": "d1cf"
+      "titre": "fawzia",
+      "lieu": "sfucks",
+      "date_debut": "2024-05-20T23:00:00.000Z",
+      "date_fin": "2024-05-28T23:00:00.000Z",
+      "id": "cf58"
     }
   ]
 }
